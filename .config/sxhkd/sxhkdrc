@@ -1,0 +1,17 @@
+super + Return
+    urxvt
+
+super + o
+    dmenu_run
+
+super + shift + e
+    bspc quit
+
+super + shift + q
+    bspc node -c
+
+super + {_,shift + }{h,j,k,l}
+    bspc node -{f,s} {west, south, north, east}
+
+super + {_, shift + }{1-6}
+    bspc {desktop -f,node -d} '^{1-6}'

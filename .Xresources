@@ -1,0 +1,6 @@
+URxvt.background: black
+URxvt.foreground: white
+URxvt.scrollBar: false
+URxvt.font: xft:consolas:size=9
+URxvt.letterSpace: -1
+URxvt.lineSpace: -1
