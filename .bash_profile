@@ -4,8 +4,10 @@
 
 sudo loadkeys "$HOME/.config/keymap"
 
-export FZF_DEFAULT_COMMAND='fd --hidden --follow'
+export FZF_DEFAULT_COMMAND='fd --hidden --follow --type file'
+export PANEL_FIFO="/tmp/panel-fifo"
 export EDITOR=nvim
+export MAN_DISABLE_SECCOMP=1
 
 # load .bashrc if exists
 [[ -f "$HOME/.bashrc" ]] && . "$HOME/.bashrc"

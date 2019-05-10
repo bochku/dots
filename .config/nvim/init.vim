@@ -2,6 +2,7 @@ call plug#begin()
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'drewtempelmeyer/palenight.vim'
+    Plug 'flazz/vim-colorschemes'
     Plug 'octol/vim-cpp-enhanced-highlight'
     Plug 'scrooloose/nerdtree'
     Plug 'ervandew/supertab'
@@ -27,3 +28,6 @@ set title
 
 source ~/.config/nvim/keybindings.vim
 source ~/.config/nvim/appearance.vim
+
+autocmd BufWritePost ~/.Xresources,~/.Xdefaults !xrdb -merge %
+autocmd BufWritePost ~/.config/polybar/config !polybar-msg cmd restart

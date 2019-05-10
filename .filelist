@@ -14,3 +14,8 @@
 /home/aditya/.scripts/scr
 /home/aditya/.xinitrc
 /home/aditya/.Xresources
+/home/aditya/.config/polybar/config
+/home/aditya/.config/keymap
+/home/aditya/.config/htop/htoprc
+/home/aditya/.config/colors/dracula.xresources
+/home/aditya/.config/colors/molokai.xresources

@@ -10,8 +10,31 @@ super + shift + e
 super + shift + q
     bspc node -c
 
+super + shift + r
+    pkill -USR1 -x sxhkd
+
 super + {_,shift + }{h,j,k,l}
     bspc node -{f,s} {west, south, north, east}
 
 super + {_, shift + }{1-6}
     bspc {desktop -f,node -d} '^{1-6}'
+
+super + u
+    id=$(cat /tmp/scr_id); \
+    bspc node $id --flag hidden; \
+    bspc node -f $id
+
+{alt,super} + Tab
+    bspc desktop -f {last,next}
+
+super + shift + Tab
+    bspc desktop -f prev
+
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+XF86Audio{Lower,Raise}Volume
+    pactl set-sink-volume @DEFAULT_SINK@ {-,+}5%
+
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle

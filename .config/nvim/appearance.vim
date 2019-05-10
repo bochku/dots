@@ -1,8 +1,10 @@
-colorscheme palenight
+colorscheme dracula
 set background=dark
 set fillchars+=vert:│
 
 hi Visual cterm=reverse
+
+hi VertSplit cterm=NONE ctermbg=NONE
 
 "statusline
 set statusline=

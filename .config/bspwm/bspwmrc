@@ -1,10 +1,11 @@
 #!/bin/bash
 
-#polybar example &
+polybar example &
 #enable_tapping &
 compton &
-#/home/aditya/.fehbg
-urxvt -name scr -e scr &
+#panel &
+/home/aditya/.fehbg
+urxvt -name scr -bg "#121212" -e scr &
 
 bspc monitor -d 1 2 3 4 5 6
 
