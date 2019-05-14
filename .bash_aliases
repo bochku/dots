@@ -12,6 +12,9 @@ alias search="yay -Ss"
 alias shutdown="sudo shutdown"
 alias reboot="sudo reboot"
 
+# the horrible thing
+alias uu="urxvt -letsp 0 -fn 'xft:xos4 Terminus:size=9'"
+
 function gc() {
     git clone https://www.github.com/"$1";
 }

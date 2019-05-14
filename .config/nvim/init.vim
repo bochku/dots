@@ -30,4 +30,5 @@ source ~/.config/nvim/keybindings.vim
 source ~/.config/nvim/appearance.vim
 
 autocmd BufWritePost ~/.Xresources,~/.Xdefaults !xrdb -merge %
-autocmd BufWritePost ~/.config/polybar/config !polybar-msg cmd restart
+autocmd BufWritePost ~/.config/compton.conf !pkill compton; compton &
+autocmd BufWritePost ~/.config/polybar/config !pkill -USR1 polybar

@@ -20,7 +20,8 @@
 background = ${xrdb:color0:#222}
 ;background = #222
 background-alt = #444
-foreground = ${xrdb:color7:#222}
+foreground = #ffffff
+;foreground = ${xrdb:color7:#222}
 ;foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
@@ -31,7 +32,7 @@ alert = #bd2c40
 override-redirect=false
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 90%
-height = 32
+height = 30
 offset-x = 5%
 offset-y = 0%
 radius = 0.0
@@ -60,7 +61,7 @@ font-4 = siji:pixelsize=10
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = date wlan pulseaudio mymemory cpu battery 
+modules-right = date pulseaudio backlight-acpi mymemory cpu battery 
 
 tray-position = right
 tray-padding = 2
@@ -177,8 +178,8 @@ label-song-ellipsis = true
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <label> <bar>
-label = 
+format = <label>
+label =   %percentage%
 
 bar-width = 10
 bar-indicator = |
@@ -344,8 +345,8 @@ format-discharging = <animation-discharging> <label-discharging>
 label-discharging = %percentage%
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
-label-full = "100" 
+#format-full-prefix = " "
+label-full = ""
 format-full-prefix-foreground = ${colors.foreground}
 format-full-underline = ${self.format-charging-underline}
 

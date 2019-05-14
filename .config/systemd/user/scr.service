@@ -1,0 +1,9 @@
+[Unit]
+Description=Persistent Scratchpad
+
+[Service]
+ExecStart=/home/aditya/.scripts/scr_exec
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

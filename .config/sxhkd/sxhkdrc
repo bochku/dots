@@ -8,7 +8,7 @@ super + shift + e
     bspc quit
 
 super + shift + q
-    bspc node -c
+    bspc node -k
 
 super + shift + r
     pkill -USR1 -x sxhkd
@@ -20,9 +20,7 @@ super + {_, shift + }{1-6}
     bspc {desktop -f,node -d} '^{1-6}'
 
 super + u
-    id=$(cat /tmp/scr_id); \
-    bspc node $id --flag hidden; \
-    bspc node -f $id
+    toggle_scr
 
 {alt,super} + Tab
     bspc desktop -f {last,next}

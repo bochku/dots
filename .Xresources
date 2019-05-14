@@ -1,15 +1,17 @@
 URxvt.scrollBar: false
 URxvt.letterSpace: -1
 URxvt.lineSpace: -1
-URxvt.font: xft:consolas:size=9, \
-    xft:Font\ Awesome\ 5\ Free\ Solid:size=10, \
-    xft:Font\ Awesome\ 5\ Free\ Regular:size=10, \
-    xft:Font\ Awesome\ 5\ Brands:size=10
-URxvt.internalBorder: 10
+URxvt.font: xft:consolas:size=9
+!, \
+!    xft:Font\ Awesome\ 5\ Free\ Solid:size=10, \
+!    xft:Font\ Awesome\ 5\ Free\ Regular:size=10, \
+!    xft:Font\ Awesome\ 5\ Brands:size=10
+URxvt.internalBorder: 5
+URxvt.perl-ext-common: default,resize-font
 
 ! Molokai theme
 URxvt.background: #101010
-URxvt.foreground: #d0d0d0
+URxvt.foreground: #ffffff
 URxvt.cursorColor: #d0d0d0
 URxvt.color0: #101010
 URxvt.color1: #960050
@@ -29,7 +31,7 @@ URxvt.color14: #4eb4fa
 URxvt.color15: #d0d0d0
 
 *.background: #101010
-*.foreground: #d0d0d0
+*.foreground: #ffffff
 *.cursorColor: #d0d0d0
 *.color0: #101010
 *.color1: #960050
