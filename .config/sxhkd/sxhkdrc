@@ -11,7 +11,7 @@ super + shift + q
     bspc node -k
 
 super + shift + r
-    pkill -USR1 -x sxhkd
+    ~/.config/bspwm/bspwmrc restart
 
 super + {_,shift + }{h,j,k,l}
     bspc node -{f,s} {west, south, north, east}
@@ -36,3 +36,19 @@ XF86Audio{Lower,Raise}Volume
 
 XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# preselect the direction
+alt + shift + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+alt + shift + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+alt + shift + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel

@@ -18,19 +18,15 @@
 
 [colors]
 background = ${xrdb:color0:#222}
-;background = #222
-background-alt = #444
-foreground = #ffffff
-;foreground = ${xrdb:color7:#222}
-;foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+background-alt = ${xrdb:color8:#444}
+foreground = ${xrdb:color7:#ffffff}
+foreground-alt = ${xrdb:color15:#555}
+primary = ${xrdb:color1:#ffb52a}
+secondary = ${xrdb:color2:#e60053}
+alert = ${xrdb:color3:#bd2c40}
 
 [bar/example]
 override-redirect=false
-;monitor = ${env:MONITOR:HDMI-1}
 width = 90%
 height = 30
 offset-x = 5%
@@ -111,6 +107,7 @@ label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
 label-occupied = 
+label-occupied-foreground = ${colors.foreground-alt}
 label-occupied-padding = 2
 
 label-urgent = 
@@ -118,7 +115,7 @@ label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
 label-empty = 
-label-empty-foreground = ${colors.foreground-alt}
+label-empty-foreground = ${colors.background-alt}
 label-empty-padding = 2
 
 ; Separator in between workspaces

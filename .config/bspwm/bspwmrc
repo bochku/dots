@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ -z "$1" ]]; then
+if [ -z "$1" ]; then
     # if no arguments are provided, it's assumed that bspwmrc is
     # being run for the first time. so we start some processes.
     polybar example &
@@ -8,12 +8,12 @@ if [[ -z "$1" ]]; then
     nm-applet &
     /home/aditya/.fehbg
     systemctl --user start scr.service
-    bspc monitor -d 1 2 3 4 5 6
+    bspc monitor -d 1 2 3 4
 fi
 
 bspc config border_width 0
 bspc config window_gap   0
-bspc config top_padding 40
+bspc config top_padding 38
 bspc config bottom_padding 10
 bspc config left_padding 10
 bspc config right_padding 10
@@ -23,3 +23,9 @@ bspc config gapless_monocle true
 bspc config focus_follows_pointer true
 
 bspc rule -a URxvt:scr sticky=on state=floating hidden=on
+
+if [ "$1" = restart ]; then
+    pkill -USR1 sxhkd
+    pkill -USR1 polybar
+    pkill -USR1 compton
+fi

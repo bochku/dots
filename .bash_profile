@@ -5,6 +5,7 @@
 sudo loadkeys "$HOME/.config/keymap"
 
 export FZF_DEFAULT_COMMAND='fd --hidden --follow --type file'
+export FZF_CTRL_T_COMMAND='fd --hidden --follow --type file'
 export PANEL_FIFO="/tmp/panel-fifo"
 export EDITOR=nvim
 export MAN_DISABLE_SECCOMP=1

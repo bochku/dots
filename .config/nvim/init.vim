@@ -1,4 +1,6 @@
 call plug#begin()
+    Plug 'dylanaraps/wal.vim'
+    Plug 'baskerville/vim-sxhkdrc'
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'drewtempelmeyer/palenight.vim'
