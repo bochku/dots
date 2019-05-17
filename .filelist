@@ -17,6 +17,12 @@
 /home/aditya/.config/systemd/user/scr.service
 /home/aditya/.filelist
 /home/aditya/.inputrc
+/home/aditya/.scripts/get_used_mem
+/home/aditya/.scripts/hide_polybar
 /home/aditya/.scripts/scr
+/home/aditya/.scripts/scr_exec
+/home/aditya/.scripts/show_polybar
+/home/aditya/.scripts/sync_dots
+/home/aditya/.scripts/toggle_scr
 /home/aditya/.xinitrc
 /home/aditya/.Xresources

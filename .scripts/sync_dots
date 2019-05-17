@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cat ~/.filelist | sort -u > ~/.filelist.new
+mv ~/.filelist.new ~/.filelist
+
+echo "New filelist: "
+cat ~/.filelist
+
+for fl in $(cat ~/.filelist); do
+    /usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME add $fl
+done

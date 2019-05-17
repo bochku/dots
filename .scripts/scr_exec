@@ -1,0 +1,4 @@
+#!/bin/bash
+
+urxvt -name scr \
+    -e /home/aditya/.scripts/scr

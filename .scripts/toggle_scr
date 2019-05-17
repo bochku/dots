@@ -1,0 +1,8 @@
+#!/bin/bash
+id=$(cat /tmp/scr_id);
+if [ -n "$id" ]; then
+    bspc node "$id" --flag hidden;
+    bspc node -f "$id";
+else
+    echo "/tmp/scr_id: $(cat /tmp/scr_id)"
+fi
