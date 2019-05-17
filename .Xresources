@@ -22,7 +22,10 @@ URxvt.color8:   #37474f
 URxvt.color9:   #ff9800
 URxvt.color10:  #8bc34a
 URxvt.color11:  #ffc107
-URxvt.color12:  #03a9f4
+!!  changing the color 12, just so vim splits
+!!  look better. lord forgive me.
+!URxvt.color12:  #03a9f4
+URxvt.color12:  #1e282d
 URxvt.color13:  #e91e63
 URxvt.color14:  #009688
 URxvt.color15:  #cfd8dc

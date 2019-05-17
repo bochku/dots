@@ -6,7 +6,8 @@ if [ -z "$1" ]; then
     polybar example &
     compton &
     nm-applet &
-    /home/aditya/.fehbg
+    #/home/aditya/.fehbg
+    nitrogen --restore
     systemctl --user start scr.service
     bspc monitor -d 1 2 3 4
 fi
