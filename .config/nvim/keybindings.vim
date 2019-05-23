@@ -17,24 +17,32 @@ let mapleader=" "
 " closing braces
 inoremap {<CR> {<CR>}<Esc>O
 
-"nnoremap <silent> <C-d> :q<CR>
-nnoremap <silent> <C-x> :q<CR>
-nnoremap <silent> <C-s> :w<CR>
+" tab keys move through blocks
+nnoremap <tab> }
+nnoremap <S-tab> {
+
+" saving and closing documents
+nnoremap <leader>s :w<CR>
+nnoremap <leader>x :q<CR>
+nnoremap <leader>X :q!<CR>
 
 " Ctrl-h clear highlights
-nnoremap <silent> <leader>nh :nohl<CR>
+nnoremap <leader>nh :nohl<CR>
 
 " leader+go to go goyo
-nnoremap <silent> <leader>go :Goyo<CR>
+nnoremap <leader>go :Goyo<CR>
 
-" \sv to reload config
-nnoremap <silent> <leader>sv :source ~/.config/nvim/init.vim<CR>
+" reloading the config file
+nnoremap <leader>r :source ~/.config/nvim/init.vim<CR>
 
 " Ctrl+n to open fzf file finder
-nnoremap <silent> <C-n> :FZF<CR>
+nnoremap <C-n> :FZF<CR>
 
-"\nt to launch NERDTree
-nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
+" launch NERDTree
+nnoremap <leader>nt :NERDTreeToggle<CR>
+
+" playback the @q macro
+nnoremap <leader>q @q
 
 "\rc to compile and run a c/cpp file
 autocmd FileType c,cpp map <leader>rc :vsplit term://mrun %:p<CR>

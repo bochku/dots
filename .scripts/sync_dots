@@ -9,3 +9,5 @@ cat ~/.filelist
 for fl in $(cat ~/.filelist); do
     /usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME add $fl
 done
+
+[ -n "$1" ] && /usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME commit -m "$1"

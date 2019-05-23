@@ -1,69 +1,102 @@
+#             _     _       _          
+#    _____  _| |__ | | ____| |_ __ ___ 
+#   / __\ \/ / '_ \| |/ / _` | '__/ __|
+#   \__ \>  <| | | |   < (_| | | | (__ 
+#   |___/_/\_\_| |_|_|\_\__,_|_|  \___|
+#                                      
+
+################################################################################
+#   program launching shortcuts
+################################################################################
+
+# launch terminal
 super + Return
     urxvt
 
-super + o
+# launch program launcher
+super + shift + Return
     dmenu_run
 
-super + shift + e
-    bspc quit
-
-super + shift + q
-    bspc node -k
-
-super + shift + r
-    ~/.config/bspwm/bspwmrc restart
-
-super + {_,shift + }{h,j,k,l}
-    bspc node -{f,s} {west, south, north, east}
-
-alt + {h,j,k,l}
-    bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 10 0}
-
-alt + shift + {h,j,k,l}
-    bspc node -z {left 10 0,bottom 0 -10,top 0 10,right -10 0}
-
-super + {_, shift + }{1-6}
-    bspc {desktop -f,node -d} '^{1-6}'
-
-super + u
+# toggle dropdown terminal
+super + backslash
     toggle_scr
 
-super + Tab
-    bspc desktop -f next.occupied
-
-super + shift + Tab
-    bspc desktop -f prev
-
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
-
+# decrease/increase volume
 XF86Audio{Lower,Raise}Volume
     pactl set-sink-volume @DEFAULT_SINK@ {-,+}5%
 
+# toggle mute
 XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-# preselect the direction
-ctrl + alt + {h,j,k,l}
-	bspc node -p {west,south,north,east}
+# show/hide polybar. Useful sometimes
+super + {Next,Prior}
+    /home/aditya/.scripts/{show,hide}_polybar
 
-# preselect the ratio
-ctrl + alt + {1-9}
-	bspc node -o 0.{1-9}
+################################################################################
+# bspwm specific shortcuts
+################################################################################
 
-# cancel the preselection for the focused node
-ctrl + alt + Escape
-	bspc node -p cancel
+# reload config
+super + shift + r
+    ~/.config/bspwm/bspwmrc restart
 
-# alternate b/w tiled and monocle layout
+# close/kill node
+super + shift + {q,w}
+    bspc node -{c,k}
+
+# exit bspwm, into the tty
+super + shift + e
+    bspc quit
+
+# switch/movenodeto desktop
+super + {_, shift + }{1-4}
+    bspc {desktop -f,node -d} '^{1-4}'
+
+# go to next occupied desktop
+super + Tab 
+    bspc desktop -f next.occupied
+
+# go to last visited desktop
+super + shift + Tab
+    bspc desktop -f prev
+
+# switch between floating,tiled and fullscreen layouts
+super + {s,t,f}
+    bspc node -t ~{floating,tiled,fullscreen}
+
+# switch between tiled and monocle layout
 super + shift + space
     bspc desktop -l next
 
-# 
+# switch between windows in current desktop, useful for monocled layout
 super + space
     bspc node -f next.local
 
+# cancel the preselection
+super +  Escape
+    bspc node -p cancel
 
-# show/hide polybar.
-super + {Next,Prior}
-    /home/aditya/.scripts/{show,hide}_polybar
+################################################################################
+# movement of nodes
+################################################################################
+
+# focus/switch nodes in tiled layout
+super + {_,shift + }{h,j,k,l}
+    bspc node -{f,s} {west,south,north,east}
+
+# move node in floating mode
+super + {u,i,o,p}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# choose preselection direction
+super + shift + {u,i,o,p}
+    bspc node -p {west,south,north,east}
+
+# resize node in tiled mode
+super + {b,n,m,comma}
+    bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 10 0}
+
+# same as above
+super + shift + {b,n,m,comma}
+    bspc node -z {left 10 0,bottom 0 -10,top 0 10,right -10 0}

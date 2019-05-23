@@ -17,8 +17,6 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 
 # custom prompt
-#export PS1="\[\033[38;5;11m\]\T\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;10m\][\w]:\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
-#export PS1="\[$(tput sgr0)\]\[\033[38;5;10m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 export PS1="\[\033[38;5;10m\]\w\[\033[38;5;15m\]\$ "
 
 # enable color support of ls and also add handy aliases
@@ -62,4 +60,3 @@ if ! shopt -oq posix; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-#HEllo
