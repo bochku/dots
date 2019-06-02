@@ -33,7 +33,7 @@ nnoremap <leader>nh :nohl<CR>
 nnoremap <leader>go :Goyo<CR>
 
 " reloading the config file
-nnoremap <leader>r :source ~/.config/nvim/init.vim<CR>
+nnoremap <leader>sv :source ~/.config/nvim/init.vim<CR>
 
 " Ctrl+n to open fzf file finder
 nnoremap <C-n> :FZF<CR>
@@ -44,5 +44,3 @@ nnoremap <leader>nt :NERDTreeToggle<CR>
 " playback the @q macro
 nnoremap <leader>q @q
 
-"\rc to compile and run a c/cpp file
-autocmd FileType c,cpp map <leader>rc :vsplit term://mrun %:p<CR>

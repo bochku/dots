@@ -9,6 +9,14 @@ export FZF_CTRL_T_COMMAND='fd --hidden --follow --type file'
 export EDITOR=nvim
 export MAN_DISABLE_SECCOMP=1
 
+#for colored man pages
+export LESS_TERMCAP_md=$'\e[01;31m' \
+export LESS_TERMCAP_me=$'\e[0m' \
+export LESS_TERMCAP_se=$'\e[0m' \
+export LESS_TERMCAP_so=$'\e[01;44;33m' \
+export LESS_TERMCAP_ue=$'\e[0m' \
+export LESS_TERMCAP_us=$'\e[01;32m' \
+
 # load .bashrc if exists
 [[ -f "$HOME/.bashrc" ]] && . "$HOME/.bashrc"
 

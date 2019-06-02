@@ -95,8 +95,8 @@ super + shift + {u,i,o,p}
 
 # resize node in tiled mode
 super + {b,n,m,comma}
-    bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 10 0}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # same as above
 super + shift + {b,n,m,comma}
-    bspc node -z {left 10 0,bottom 0 -10,top 0 10,right -10 0}
+    bspc node -z {left 20 0,bottom 0 -20,top 0 20,right -20 0}

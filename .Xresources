@@ -2,7 +2,10 @@ URxvt.scrollBar: false
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.font: xft:Iosevka SS04:size=10
-URxvt.internalBorder: 5
+URxvt.boldFont: xft:Iosevka SS04:style=bold:size=10
+URxvt.italicFont: xft:Iosevka SS04:style=italic:size=10
+URxvt.boldItalicFont: xft:Iosevka SS04:style=bolditalic:size=10
+URxvt.internalBorder: 0
 URxvt.perl-ext-common: default,resize-font
 URxvt.iso14755: false
 URxvt.iso14755_52: false

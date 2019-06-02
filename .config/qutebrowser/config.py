@@ -54,9 +54,13 @@ c.tabs.title.format = "{title}"
 
 c.tabs.indicator.width = 0
 c.statusbar.hide = True
+c.url.default_page = 'file:///home/aditya/startpage/index.html'
+c.url.start_pages = 'file:///home/aditya/startpage/index.html'
 
 ################################################################################
 # bindings
 ################################################################################
 
 config.bind( 'x', 'tab-close' )
+config.bind( 'J', 'tab-prev' )
+config.bind( 'K', 'tab-next' )

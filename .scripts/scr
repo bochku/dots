@@ -1,9 +1,4 @@
 #!/bin/sh
 
 bspc query -N -n .floating > /tmp/scr_id
-tmux has-session -t scr
-if [ "$?" -eq 0 ]; then
-    tmux at -t scr
-else
-    tmux new -s scr
-fi
+tmux new-session -A -t scr

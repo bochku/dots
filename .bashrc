@@ -17,7 +17,7 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 
 # custom prompt
-export PS1="\[\033[38;5;10m\]\w\[\033[38;5;15m\]\$ "
+export PS1="  \[\033[38;5;10m\]\w\[\033[38;5;15m\]\$ "
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

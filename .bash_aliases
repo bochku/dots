@@ -3,6 +3,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias c="clear"
 alias r="ranger"
+alias ka="killall"
 
 alias update="yay -Syu"
 alias install="yay -S"

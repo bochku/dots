@@ -3,10 +3,9 @@
 if [ -z "$1" ]; then
     # if no arguments are provided, it's assumed that bspwmrc is
     # being run for the first time. so we start some processes.
-    polybar example &
+    polybar aditya &
     compton &
     nm-applet &
-    #/home/aditya/.fehbg
     nitrogen --restore
     systemctl --user start scr.service
     bspc monitor -d 1 2 3 4
